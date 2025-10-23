@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte con Clau - Expresión Artística Personalizada</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .font-dancing { font-family: 'Dancing Script', cursive; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        .bg-gradient-clau { background: linear-gradient(135deg, #FFE05D, #FF6B9D, #4ECDC4); }
+        .text-gradient { background: linear-gradient(135deg, #8B4513, #FF69B4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="font-poppins">
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <img src="https://i.ibb.co/ZYqgN8x/logo-arte-clau.png" alt="Arte con Clau Logo" class="h-12 w-12 rounded-full">
+                    <span class="text-2xl font-dancing font-bold text-gradient">Arte con Clau</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-pink-500 transition-colors">Inicio</a>
+                    <a href="#servicios" class="text-gray-700 hover:text-pink-500 transition-colors">Servicios</a>
+                    <a href="#galeria" class="text-gray-700 hover:text-pink-500 transition-colors">Galería</a>
+                    <a href="#sobre-mi" class="text-gray-700 hover:text-pink-500 transition-colors">Sobre Mí</a>
+                    <a href="#contacto" class="text-gray-700 hover:text-pink-500 transition-colors">Contacto</a>
+                </div>
+                <button class="md:hidden" onclick="toggleMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <a href="#inicio" class="block py-2 text-gray-700 hover:text-pink-500">Inicio</a>
+                <a href="#servicios" class="block py-2 text-gray-700 hover:text-pink-500">Servicios</a>
+                <a href="#galeria" class="block py-2 text-gray-700 hover:text-pink-500">Galería</a>
+                <a href="#sobre-mi" class="block py-2 text-gray-700 hover:text-pink-500">Sobre Mí</a>
+                <a href="#contacto" class="block py-2 text-gray-700 hover:text-pink-500">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="bg-gradient-clau pt-20 pb-16">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <img src="https://i.ibb.co/ZYqgN8x/logo-arte-clau.png" alt="Arte con Clau" class="w-40 h-40 mx-auto mb-8 rounded-full shadow-2xl">
+                <h1 class="text-5xl md:text-7xl font-dancing font-bold text-white mb-6 drop-shadow-lg">
+                    Arte con Clau
+                </h1>
+                <p class="text-xl md:text-2xl text-white mb-8 font-light">
+                    Expresión social mediante arte personalizado y técnicas de lettering únicas
+                </p>
+                <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
+                    <button onclick="document.getElementById('galeria').scrollIntoView({behavior: 'smooth'})" class="bg-white text-pink-500 px-8 py-3 rounded-full font-semibold hover:bg-pink-50 transition-all transform hover:scale-105 shadow-lg">
+                        Ver Trabajos
+                    </button>
+                    <button onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})" class="bg-pink-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-pink-600 transition-all transform hover:scale-105 shadow-lg">
+                        Contactar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/573156119249?text=Hola%20Clau!%20Me%20interesa%20tu%20trabajo%20artístico" 
+       target="_blank" 
+       class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all z-50 animate-bounce">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-dancing font-bold text-gradient mb-4">Mis Servicios</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Transformo ideas en arte personalizado con técnicas de lettering y diseño único</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:transform hover:scale-105 transition-all">
+                    <div class="bg-gradient-to-r from-yellow-400 to-pink-400 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"></path>
+                            <path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Tarjetas Personalizadas</h3>
+                    <p class="text-gray-600 text-center">Tarjetas únicas hechas a mano para expresar tus sentimientos más especiales</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:transform hover:scale-105 transition-all">
+                    <div class="bg-gradient-to-r from-green-400 to-blue-400 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Carteles y Pancartas</h3>
+                    <p class="text-gray-600 text-center">Diseños llamativos para eventos, protestas sociales o celebraciones especiales</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:transform hover:scale-105 transition-all">
+                    <div class="bg-gradient-to-r from-purple-400 to-pink-400 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 2L3 7v11a1 1 0 001 1h12a1 1 0 001-1V7l-7-5zM6 18v-4.5a.5.5 0 01.5-.5h7a.5.5 0 01.5.5V18H6z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Decoración de Cajas</h3>
+                    <p class="text-gray-600 text-center">Transformo cajas simples en hermosos regalos decorados con técnicas únicas</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:transform hover:scale-105 transition-all">
+                    <div class="bg-gradient-to-r from-red-400 to-yellow-400 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Personalización de Ropa</h3>
+                    <p class="text-gray-600 text-center">Camisetas, tenis y prendas únicas con diseños personalizados y lettering</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:transform hover:scale-105 transition-all">
+                    <div class="bg-gradient-to-r from-blue-400 to-green-400 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Marcado de Cuadernos</h3>
+                    <p class="text-gray-600 text-center">Cuadernos personalizados para estudiantes de colegios y universidades</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:transform hover:scale-105 transition-all">
+                    <div class="bg-gradient-to-r from-pink-400 to-purple-400 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Retratos Caricatura</h3>
+                    <p class="text-gray-600 text-center">Retratos únicos en técnica de caricatura que capturan la esencia de cada persona</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section id="sobre-mi" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="https://i.ibb.co/ZYqgN8x/logo-arte-clau.png" alt="Clau - Artista" class="w-80 h-80 rounded-full shadow-2xl mx-auto">
+                    </div>
+                    <div>
+                        <h2 class="text-4xl font-dancing font-bold text-gradient mb-6">Sobre Mí</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            ¡Hola! Soy Clau, una apasionada artista dedicada a transformar ideas en expresiones artísticas únicas. 
+                            Mi especialidad es el lettering y la personalización de objetos cotidianos, convirtiéndolos en piezas 
+                            especiales llenas de significado.
+                        </p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Cada trabajo que realizo lleva una parte de mi corazón y está pensado para transmitir emociones 
+                            genuinas. Desde tarjetas personalizadas hasta retratos únicos, mi objetivo es crear arte que 
+                            conecte con las personas y les permita expresar sus sentimientos de manera especial.
+                        </p>
+                        <div class="flex space-x-4">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-pink-500">100+</div>
+                                <div class="text-gray-600">Trabajos Realizados</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-pink-500">50+</div>
+                                <div class="text-gray-600">Clientes Felices</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-pink-500">3+</div>
+                                <div class="text-gray-600">Años de Experiencia</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-dancing font-bold text-gradient mb-4">¡Hablemos!</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">¿Tienes una idea especial? ¡Me encantaría ayudarte a hacerla realidad!</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6">Información de Contacto</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-pink-100 p-3 rounded-full">
+                                    <svg class="w-6 h-6 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p class="text-gray-600">claudialorenalondonocortes@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-blue-100 p-3 rounded-full">
+                                    <svg class="w-6 h-6 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">WhatsApp</h4>
+                                    <p class="text-gray-600">+57 315 611 9249 | +57 310 311 0055</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-green-100 p-3 rounded-full">
+                                    <svg class="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Dirección</h4>
+                                    <p class="text-gray-600">El Paujil, Caquetá, Colombia<br>Código postal: 181030</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-semibold mb-4">Horarios de Atención</h4>
+                            <div class="text-gray-600 space-y-1">
+                                <p>Lunes - Viernes: 9:00 AM - 6:00 PM</p>
+                                <p>Sábados: 10:00 AM - 4:00 PM</p>
+                                <p>Domingos: Solo por cita previa</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <form class="space-y-6" onsubmit="enviarFormulario(event)">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Nombre</label>
+                                <input type="text" id="nombre" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Servicio de Interés</label>
+                                <select id="servicio" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent">
+                                    <option>Tarjetas Personalizadas</option>
+                                    <option>Carteles y Pancartas</option>
+                                    <option>Decoración de Cajas</option>
+                                    <option>Personalización de Ropa</option>
+                                    <option>Marcado de Cuadernos</option>
+                                    <option>Retratos Caricatura</option>
+                                    <option>Otro</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Mensaje</label>
+                                <textarea rows="4" id="mensaje" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent" placeholder="Cuéntame sobre tu idea..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition-all transform hover:scale-105 shadow-lg">
+                                Enviar por WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="flex justify-center items-center space-x-3 mb-6">
+                    <img src="https://i.ibb.co/ZYqgN8x/logo-arte-clau.png" alt="Arte con Clau" class="h-12 w-12 rounded-full">
+                    <span class="text-2xl font-dancing font-bold">Arte con Clau</span>
+                </div>
+                <p class="text-gray-400 mb-6">Transformando ideas en arte personalizado con amor y creatividad</p>
+                
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="https://www.facebook.com/profile.php?id=61581043076480" target="_blank" class="text-gray-400 hover:text-pink-400 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/573156119249" target="_blank" class="text-gray-400 hover:text-pink-400 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/arteconclau2024" target="_blank" class="text-gray-400 hover:text-pink-400 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="border-t border-gray-700 pt-6">
+                    <p class="text-gray-400">&copy; 2024 Arte con Clau. Todos los derechos reservados. | Hecho con ❤️ para expresar arte y creatividad</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scrolling para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Función para enviar formulario por WhatsApp
+        function enviarFormulario(event) {
+            event.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const servicio = document.getElementById('servicio').value;
+            const mensaje = document.getElementById('mensaje').value;
+            
+            const textoWhatsApp = `¡Hola Clau! 
+            
+Nombre: ${nombre}
+Email: ${email}
+Servicio de interés: ${servicio}
+Mensaje: ${mensaje}
+
+¡Me encantaría trabajar contigo!`;
+            
+            const urlWhatsApp = `https://wa.me/573156119249?text=${encodeURIComponent(textoWhatsApp)}`;
+            window.open(urlWhatsApp, '_blank');
+        }
+
+        // Animación de entrada para elementos cuando aparecen en viewport
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Aplicar animación a las tarjetas de servicios
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.bg-white.rounded-lg.shadow-lg').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
